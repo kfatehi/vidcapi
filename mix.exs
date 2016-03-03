@@ -14,7 +14,7 @@ defmodule Vidcapi.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:lager, :uvc],
+    [applications: [:lager, :uvc, :jpeg],
     mod: {Vidcapi,[]}]
   end
 
@@ -29,6 +29,7 @@ defmodule Vidcapi.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{ :uvc, github: "erlyvideo/uvc" },
-     { :lager, "3.0.2" }]
+     { :lager, "3.0.2" },
+     { :jpeg, github: "erlyvideo/jpeg" }]
   end
 end

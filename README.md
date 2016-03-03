@@ -3,6 +3,8 @@
 **TODO: Add description**
 
 sudo apt-get install libswscale-dev
+sudo apt-get install libjpeg-turbo8
+sudo apt-get install libjpeg-turbo8-dev
 
 {:ok, uvc} = :uvc.open([{:device, 0}, {:debug, true}, {:size, {640,480}}, {:fps, 20}])
 

@@ -1,3 +1,5 @@
+require IEx 
+
 defmodule Vidcapi do
   def start(:normal, []) do
     {:ok, _uvc} = :uvc.open([
@@ -11,8 +13,8 @@ defmodule Vidcapi do
 
   def loop() do
     receive do
-      {:uvc, _uvc, codec, pts, jpeg} ->
-        IO.puts "get jpeg"
+      {:uvc, _uvc, _codec, _pts, jpeg} ->
+        IEx.pry
         loop()
     end
   end
